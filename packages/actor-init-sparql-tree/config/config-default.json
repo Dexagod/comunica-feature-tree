@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^3.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/runner/^1.0.0/components/context.jsonld",
+    {
+      "caist": "npmd:@comunica/actor-init-sparql-tree/",
+      "files-caist": "caist:^1.0.0/",
+      "config-setsa": "files-caist:config/sets/"
+    }
+  ],
+  "import": [
+    "npmd:@comunica/actor-init-sparql/^1.0.0/config/config-default.json",
+    "files-caist:config/sets/rdf-tree-specification.json"
+  ]
+}

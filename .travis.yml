@@ -1,0 +1,1 @@
+import: comunica/travis-presets:yarn-monorepo.yml@master

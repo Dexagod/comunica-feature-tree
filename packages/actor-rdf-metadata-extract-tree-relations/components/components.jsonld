@@ -1,0 +1,9 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-metadata-extract-tree-relations/^1.0.0/components/context.jsonld",
+  "@id": "npmd:@comunica/actor-rdf-metadata-extract-tree-relations",
+  "@type": "Module",
+  "requireName": "@comunica/actor-rdf-metadata-extract-tree-relations",
+  "import": [
+    "files-carmetr:components/Actor/RdfMetadataExtract/TreeRelations.jsonld"
+  ]
+}

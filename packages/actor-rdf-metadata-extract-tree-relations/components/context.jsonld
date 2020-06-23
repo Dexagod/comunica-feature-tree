@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^1.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carmetr": "npmd:@comunica/actor-rdf-metadata-extract-tree-relations/",
+      "files-carmetr": "carmetr:^1.0.0/",
+
+      "ActorRdfMetadataExtractTreeRelations": "carmetr:Actor/RdfMetadataExtract/TreeRelations"
+    }
+  ]
+}

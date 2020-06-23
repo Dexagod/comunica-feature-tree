@@ -1,0 +1,18 @@
+{
+  "groups": {
+    "root": {
+      "packages": [
+        "package.json"
+      ]
+    },
+    "allPackages": {
+      "packages": [
+        "packages/actor-init-sparql-tree/package.json",
+        "packages/bus-rdf-metadata-extract/package.json",
+        "packages/bus-rdf-metadata-extract-tree-relations/package.json",
+        "packages/bus-rdf-resolve-hypermedia-links/package.json",
+        "packages/bus-rdf-resolve-hypermedia-links-tree/package.json"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-init-sparql/^1.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/runner/^1.0.0/components/context.jsonld",
+    
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-metadata-extract/^1.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-metadata-extract-tree-relations/^1.0.0/components/context.jsonld",
+    
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-resolve-hypermedia-links/^1.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-resolve-hypermedia-links-tree/^1.0.0/components/context.jsonld",
+    {
+      "caist": "npmd:@comunica/actor-init-sparql-tree/",
+      "files-caist": "caist:^1.0.0/",
+      "config-setsa": "files-caist:config/sets/"
+    }
+  ],
+  "@id": "urn:comunica:my",
+  "actors": [
+    {
+      "@id": "config-setsa:rdf-tree-specification.json#myTreeMetadataExtractor",
+      "@type": "ActorRdfMetadataExtractTreeRelations"
+    },
+    {
+      "@id": "config-setsa:rdf-resolve-hypermedia-links-tree.json#myHypermediaTreeLinksResolver",
+      "@type": "ActorRdfResolveHypermediaLinksTree"
+    }
+  ]
+}

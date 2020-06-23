@@ -1,0 +1,52 @@
+{
+  "name": "@comunica/actor-init-sparql-tree",
+  "version": "1.0.0",
+  "description": "A tree init actor",
+  "lsd:importPaths": {
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-init-sparql-tree/^1.0.0/config/": "config/"
+  },
+  "main": "index.js",
+  "typings": "index",
+  "repository": "https://github.com/comunica/comunica/tree/master/packages/actor-init-sparql-tree",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "comunica",
+    "actor",
+    "init",
+    "tree"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comunica/comunica/issues"
+  },
+  "homepage": "https://github.com/comunica/comunica#readme",
+  "files": [
+    "config",
+    "bin/**/*.d.ts",
+    "bin/**/*.js",
+    "index.js",
+    "index.d.ts",
+    "index-browser.d.ts",
+    "index-browser.js",
+    "engine-default.js"
+  ],
+  "dependencies": {
+    "@comunica/actor-init-sparql": "^1.13.1",
+    "@comunica/actor-rdf-metadata-extract-tree-relations": "^1.0.0",
+    "@comunica/actor-rdf-resolve-hypermedia-links-tree": "^1.0.0",
+    "@comunica/runner": "^1.6.0",
+    "@comunica/runner-cli": "^1.6.0",
+    "babel-polyfill": "^6.26.0"
+  },
+  "scripts": {
+    "test": "node \"../../node_modules/jest/bin/jest.js\" ${1}",
+    "test-watch": "node \"../../node_modules/jest/bin/jest.js\" ${1} --watch",
+    "lint": "node \"../../node_modules/tslint/bin/tslint\" lib/**/*.ts test/**/*.ts --exclude '**/*.d.ts'",
+    "build": "node \"../../node_modules/typescript/bin/tsc\"",
+    "prepare": "comunica-compile-config config/config-default.json > engine-default.js",
+    "browser": "npm run prepare && \"../../node_modules/webpack/bin/webpack.js\" --config webpack.config.js --mode production",
+    "validate": "npm ls"
+  }
+}
