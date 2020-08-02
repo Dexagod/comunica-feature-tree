@@ -8,7 +8,12 @@
     
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-resolve-hypermedia-links/^1.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-resolve-hypermedia-links-tree/^1.0.0/components/context.jsonld",
+
     {
+      "cais": "npmd:@comunica/actor-init-sparql/",
+      "files-cais": "cais:^1.0.0/",
+      "config-setsa": "files-cais:config/sets/"
+    }, {
       "caist": "npmd:@comunica/actor-init-sparql-tree/",
       "files-caist": "caist:^1.0.0/",
       "config-setsa": "files-caist:config/sets/"

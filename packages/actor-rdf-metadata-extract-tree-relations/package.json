@@ -66,6 +66,7 @@
     "validate": "npm ls"
   },
   "dependencies": {
-    "rdf-literal": "^1.1.0"
+    "rdf-literal": "^1.1.0",
+    "tree-specification-pruning": "^1.0.4"
   }
 }

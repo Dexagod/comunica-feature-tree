@@ -1,6 +1,6 @@
 # Comunica Tree Init Actor
 
-[![npm version](https://badge.fury.io/js/%40comunica%2Factor-init-sparql-tree.svg)](https://www.npmjs.com/package/@comunica/actor-init-tree)
+[![npm version](https://badge.fury.io/js/@comunica/actor-init-sparql-tree.svg)](https://www.npmjs.com/package/comunica-actor-init-tree)
 
 A comunica Tree Init Actor.
 
