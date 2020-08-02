@@ -6,7 +6,6 @@ import {
 } from "rdf-literal";
 
 import * as RDF from 'rdf-js';
-import { evaluate } from 'tree-specification-pruning';
 import { defaultContext } from "tree-specification-pruning/dist/Util/Util";
 import { NameSpaces } from './NameSpaces';
 import { compareURLs } from './Util';
