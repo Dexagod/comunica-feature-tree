@@ -1,4 +1,4 @@
-# Comunica Feature — AMF
+# Comunica Feature — TREE
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/comunica/comunica-feature-amf.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/comunica/comunica-feature-amf.svg?branch=master)](https://travis-ci.org/comunica/comunica-feature-amf)
@@ -7,14 +7,10 @@
 This is a monorepo that contains packages for allowing [Comunica](https://github.com/comunica/comunica) to handle approximate membership functions.
 If you want to _use_ an AMF-enabled Comunica engine, have a look at [Comunica SPARQL AMF](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-init-sparql-amf).
 
-Concretely, this monorepo adds AMF support to Comunica using the following packages:
-* [RDF Membership Filter Bus](https://github.com/comunica/comunica-feature-amf/tree/master/packages/bus-rdf-membership-filter): A bus for actors that can construct approximate membership filters.
-* [Bloom RDF Membership Filter Actor](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-rdf-membership-filter-bloom): An approximate membership filter actor for constructing Bloom filters.
-* [GCS RDF Membership Filter Actor](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-rdf-membership-filter-gcs): An approximate membership filter actor for constructing GCS filters.
-* [Membership Metadata Extractor Actor](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-rdf-metadata-extract-membership): An actor that extracts approximate membership filter metadata, and dynamically constructs membership filters.
-* [AMF Quad Pattern Actor](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-query-operation-quadpattern-membership-filter): An AMF-aware quad pattern actor.
-* [AMF BGP Actor](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-query-operation-bgp-membership-filter): An AMF-aware BGP actor that applies filters on separate patterns.
-* [Combined AMF BGP Actor](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-query-operation-bgp-membership-filter-combined): An AMF-aware BGP actor that combines filters and executes them on all relevant patterns to achieve a higher filtering yield.
+Concretely, this monorepo adds support for the [Tree specification](https://github.com/TREEcg/specification) to Comunica using the following packages:
+* Metedata Extract TREE Relations Actor: An actor that extracts and filters the relations from the data according to the TREE specification.
+* Resolve TREE Hypermedia Links Actor: An actor that resolves the retrieved relation metadata, and can prune the search space when querying the tree.
+* TREE Init SPARQL Actor: An init actor that includes the new actors in its execution.
 
 ## Development Setup
 
@@ -28,15 +24,15 @@ Comunica is tested on OSX, Linux and Windows.
 This project can be setup by cloning and installing it as follows:
 
 ```bash
-$ git clone git@github.com:comunica/comunica-feature-amf
-$ cd comunica-feature-amf
+$ git clone git@github.com:dexagod/comunica-feature-tree
+$ cd comunica-feature-tree
 $ yarn install
 ```
 
 **Note: `npm install` is not supported at the moment, as this project makes use of Yarn's [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) functionality**
 
 This will install the dependencies of all modules, and bootstrap the Lerna monorepo.
-After that, all [Comunica packages](https://github.com/comunica/comunica-feature-amf/tree/master/packages) are available in the `packages/` folder.
+After that, all [Comunica packages](https://github.com/dexagod/comunica-feature-tree/tree/master/packages) are available in the `packages/` folder.
 
 Furthermore, this will add [pre-commit hooks](https://www.npmjs.com/package/pre-commit)
 to build, lint and test.
