@@ -1,6 +1,6 @@
 {
   "name": "@comunica/actor-rdf-resolve-hypermedia-links-tree",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A tree rdf-resolve-hypermedia-links actor",
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-resolve-hypermedia-links-tree",
   "lsd:components": "components/components.jsonld",
@@ -23,11 +23,6 @@
     "tree"
   ],
   "license": "MIT",
-  "bin": {
-    "comunica-sparql-tree": "./bin/query.js",
-    "comunica-sparql-tree-http": "./bin/http.js",
-    "comunica-dynamic-sparql-tree": "./bin/query-dynamic.js"
-  },
   "bugs": {
     "url": "https://github.com/comunica/comunica/issues"
   },

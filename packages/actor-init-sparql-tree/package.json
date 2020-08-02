@@ -1,6 +1,6 @@
 {
   "name": "@comunica/actor-init-sparql-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A sparql init actor that can process tree relations",
   "lsd:importPaths": {
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-init-sparql-tree/^1.0.0/config/": "config/"
@@ -18,6 +18,11 @@
     "tree"
   ],
   "license": "MIT",
+  "bin": {
+    "comunica-sparql-tree": "./bin/query.js",
+    "comunica-sparql-tree-http": "./bin/http.js",
+    "comunica-dynamic-sparql-tree": "./bin/query-dynamic.js"
+  },
   "bugs": {
     "url": "https://github.com/comunica/comunica/issues"
   },
