@@ -4,13 +4,17 @@
 [![Build Status](https://travis-ci.org/comunica/comunica-feature-amf.svg?branch=master)](https://travis-ci.org/comunica/comunica-feature-amf)
 [![Coverage Status](https://coveralls.io/repos/github/comunica/comunica-feature-amf/badge.svg?branch=master)](https://coveralls.io/github/comunica/comunica-feature-amf?branch=master)
 
-This is a monorepo that contains packages for allowing [Comunica](https://github.com/comunica/comunica) to handle approximate membership functions.
-If you want to _use_ an AMF-enabled Comunica engine, have a look at [Comunica SPARQL AMF](https://github.com/comunica/comunica-feature-amf/tree/master/packages/actor-init-sparql-amf).
+This is a monorepo that contains packages for allowing [Comunica](https://github.com/comunica/comunica) to handle data fragmentations using the [TREE Specification](https://github.com/TREEcg/specification).
 
 Concretely, this monorepo adds support for the [Tree specification](https://github.com/TREEcg/specification) to Comunica using the following packages:
 * Metedata Extract TREE Relations Actor: An actor that extracts and filters the relations from the data according to the TREE specification.
 * Resolve TREE Hypermedia Links Actor: An actor that resolves the retrieved relation metadata, and can prune the search space when querying the tree.
 * TREE Init SPARQL Actor: An init actor that includes the new actors in its execution.
+
+## Query
+If you just want to query, have a look at the pre-built engine:
+
+- [Comunica SPARQL TREE](https://github.com/Dexagod/comunica-feature-tree/tree/master/packages/actor-init-sparql-tree): SPARQL/GraphQL querying from JavaScript applications or the CLI with support for the TREE Specification.
 
 ## Development Setup
 
