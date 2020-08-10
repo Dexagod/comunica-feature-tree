@@ -22,9 +22,11 @@ Alternatively, you can install from the latest GitHub sources. For this, please 
 This actor can be used to execute SPARQL queries from the command line, within a Node.JS application, or from within a browser.
 
 ### Usage from the command line
+Queries over data fragmentations using the [TREE Specification](https://github.com/TREEcg/specification/) can be done from the command line as follows:
 ```
 $ comunica-sparql-tree https://fast-and-slow.osoc.be/data/streetname/prefix 'SELECT ?s ?o WHERE { ?s <http://www.w3.org/2000/01/rdf-schema#label> ?o. FILTER(strstarts(?o, "Gent")) }'
 ```
+![Example of command line execution](https://github.com/Dexagod/comunica-feature-tree/blob/master/utils/peek_sparql_tree.gif?raw=true)
 
 The *comunica-sparql-tree* command is equal to executing ```node bin/query.js```.
 
