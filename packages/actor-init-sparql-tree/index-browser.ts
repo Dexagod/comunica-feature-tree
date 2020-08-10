@@ -6,7 +6,7 @@ import { Algebra } from 'sparqlalgebrajs';
  * @return {ActorInitSparql} A comunica engine.
  */
 export function newEngine(): ActorInitSparql {
-  const initActorSPARQL = require('../engine-default.js');
+  const initActorSPARQL = require('./engine-default.js');
   let queryFunction = initActorSPARQL.query;
   queryFunction = queryFunction.bind(initActorSPARQL)
   const newQueryFunction = async (query: string | Algebra.Operation, context?: any) => {

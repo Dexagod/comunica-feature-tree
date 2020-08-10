@@ -1,6 +1,6 @@
 {
   "name": "@comunica/actor-init-sparql-tree",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A sparql init actor that can process tree relations",
   "lsd:importPaths": {
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-init-sparql-tree/^1.0.0/config/": "config/"
