@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "typings": "index",
-  "repository": "https://github.com/comunica/comunica/tree/master/packages/actor-init-sparql-tree",
+  "repository": "https://github.com/Dexagod/comunica-feature-tree/tree/master/packages/actor-init-sparql-tree",
   "publishConfig": {
     "access": "public"
   },
@@ -24,9 +24,9 @@
     "comunica-dynamic-sparql-tree": "./bin/query-dynamic.js"
   },
   "bugs": {
-    "url": "https://github.com/comunica/comunica/issues"
+    "url": "https://github.com/Dexagod/comunica-feature-tree/issues"
   },
-  "homepage": "https://github.com/comunica/comunica#readme",
+  "homepage": "https://github.com/Dexagod/comunica-feature-tree",
   "files": [
     "config",
     "bin/**/*.d.ts",
