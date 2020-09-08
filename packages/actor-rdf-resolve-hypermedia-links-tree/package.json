@@ -1,6 +1,6 @@
 {
   "name": "@comunica/actor-rdf-resolve-hypermedia-links-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tree rdf-resolve-hypermedia-links actor",
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-resolve-hypermedia-links-tree",
   "lsd:components": "components/components.jsonld",
@@ -66,6 +66,6 @@
     "validate": "npm ls"
   },
   "dependencies": {
-    "tree-specification-pruning": "^1.0.4"
+    "tree-specification-pruning": "^1.0.6"
   }
 }

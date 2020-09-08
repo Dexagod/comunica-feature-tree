@@ -105,7 +105,11 @@ export class ActorRdfMetadataExtractTreeRelations extends ActorRdfMetadataExtrac
           // Check for predicates used in TREE specification
           let normalizedPredicateValue = this.predicateMapping.get(quad.predicate.value);
           if (normalizedPredicateValue !== undefined) {
-            this.addToObjectInMap(treeMetadata, convertBlanknodeTerm(quad.subject), normalizedPredicateValue, convertBlanknodeTerm(quad.object));
+            if (normalizedPredicateValue === 'tree:value') { // We require the datatype of the relation value
+              this.addToObjectInMap(treeMetadata, convertBlanknodeTerm(quad.subject), normalizedPredicateValue, quad.object);
+            } else {
+              this.addToObjectInMap(treeMetadata, convertBlanknodeTerm(quad.subject), normalizedPredicateValue, convertBlanknodeTerm(quad.object));
+            }
           }
           normalizedPredicateValue = this.reversePredicateMapping.get(quad.predicate.value);
           if (normalizedPredicateValue !== undefined) {

@@ -1,5 +1,6 @@
 import {ActorRdfResolveHypermediaLinks} from "@comunica/bus-rdf-resolve-hypermedia-links";
 import {Bus} from "@comunica/core";
+import * as N3 from 'n3';
 import { defaultContext } from "tree-specification-pruning/dist/Util/Util";
 import {ActorRdfResolveHypermediaLinksTree} from "../lib/ActorRdfResolveHypermediaLinksTree";
 
@@ -40,7 +41,7 @@ describe('ActorRdfResolveHypermediaLinksTree', () => {
     const followRelation = {
       'tree:node': 'mypage#relationNode',
       'tree:path': 'http://www.w3.org/2000/01/rdf-schema#label',
-      'tree:value': 'test',
+      'tree:value': N3.DataFactory.literal('test'),
       '@id': 'https://mypage#relation',
       '@type': 'https://w3id.org/tree#PrefixRelation',
     };
@@ -48,7 +49,7 @@ describe('ActorRdfResolveHypermediaLinksTree', () => {
     const notFollowRelation = {
       'tree:node': 'mypage#relationNode',
       'tree:path': 'http://www.w3.org/2000/01/rdf-schema#label',
-      'tree:value': 'apple',
+      'tree:value': N3.DataFactory.literal('apple'),
       '@id': 'https://mypage#relation',
       '@type': 'https://w3id.org/tree#PrefixRelation',
     };
@@ -63,12 +64,12 @@ describe('ActorRdfResolveHypermediaLinksTree', () => {
       actor = new ActorRdfResolveHypermediaLinksTree({ name: 'actor', bus });
     });
 
-    it('should run for relations that can\'t be pruned', () => {
+    it('should run for relations that can be pruned', () => {
       const contextMap: any = new Map([['@query', query]]);
       return expect(actor.run({ metadata: relationFollowMetadata, context: contextMap })).resolves.toMatchObject({ urls: ['mypage#relationNode'] });
     });
 
-    it('should run for relations that can be pruned', () => {
+    it('should run for relations that can\'t be pruned', () => {
       const contextMap: any = new Map([['@query', query]]);
       return expect(actor.run({ metadata: relationNotFollowMetadata, context: contextMap })).resolves.toMatchObject({ urls: [] });
     });
@@ -107,12 +108,13 @@ describe('ActorRdfResolveHypermediaLinksTree', () => {
     it('should not prune but add url if tree:path property missing', () => {
       const relation = {
         'tree:node': 'mypage#relationNode',
-        'tree:value': 'apple',
+        'tree:value': N3.DataFactory.literal('apple'),
         '@id': 'https://mypage#relation',
         '@type': 'https://w3id.org/tree#PrefixRelation',
       };
       const contextMap: any = new Map([['@query', query]]);
       return expect(actor.run({ metadata: {treeProperties: { context: defaultContext, relations : new Map([["mypage#relation", relation]]) }}, context: contextMap })).resolves.toMatchObject({ urls: ['mypage#relationNode'] });
     });
+
   });
 });

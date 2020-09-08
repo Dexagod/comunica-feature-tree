@@ -1,5 +1,6 @@
 import {ActorRdfMetadataExtract} from "@comunica/bus-rdf-metadata-extract";
 import {Bus} from "@comunica/core";
+import * as N3 from 'n3';
 import { defaultContext } from "tree-specification-pruning/dist/Util/Util";
 import {ActorRdfMetadataExtractTreeRelations} from "../lib/ActorRdfMetadataExtractTreeRelations";
 import { NameSpaces } from '../lib/NameSpaces';
@@ -65,7 +66,7 @@ describe('ActorRdfMetadataExtractTreeRelations', () => {
         quad('mypage#Node1', TREE + 'remainingItems', 100),
         quad('mypage#Node1', TREE + 'relation', '_:relation1'),
         quad('_:relation1', TYPE, TREE + 'Relation'),
-        quad('_:relation1', TREE + 'value', 'Sint'),
+        quad('_:relation1', TREE + 'value', '"Sint"'),
         quad('_:relation1', TREE + 'path', 'http://example.com/StreetName'),
         quad('_:relation1', TREE + 'node', 'otherpage#Node2'),
         quad('_:relation1', TREE + 'remainingItems', 20),
@@ -96,8 +97,17 @@ describe('ActorRdfMetadataExtractTreeRelations', () => {
                   'tree:node' : 'otherpage#Node2',
                   'tree:path' : 'http://example.com/StreetName',
                   'tree:remainingItems' : 20,
-                  'tree:value' : 'Sint',
-                }],
+                  "tree:value": {
+                    datatype: {
+                      termType: "NamedNode",
+                      value: "http://www.w3.org/2001/XMLSchema#string",
+                    },
+                    language: "",
+                    termType: "Literal",
+                    value: 'Sint',
+                  },
+                },
+                ],
               ]),
             },
           },
@@ -119,11 +129,11 @@ describe('ActorRdfMetadataExtractTreeRelations', () => {
         quad('mypage#Node1', TREE + 'relation', 'mypage#Relation1'),
         quad('mypage#Node3', TREE + 'relation', 'mypage#Relation3'),
         quad('mypage#Relation1', TYPE, TREE + 'Relation'),
-        quad('mypage#Relation1', TREE + 'value', 'Sint'),
+        quad('mypage#Relation1', TREE + 'value', '"Sint"'),
         quad('mypage#Relation1', TREE + 'path', 'http://example.com/StreetName'),
         quad('mypage#Relation1', TREE + 'remainingItems', "100^^http://www.w3.org/2001/XMLSchema#integer"),
         quad('mypage#Relation3', TYPE, TREE + 'Relation'),
-        quad('mypage#Relation3', TREE + 'value', 'Tech'),
+        quad('mypage#Relation3', TREE + 'value', '"Tech"'),
         quad('mypage#Relation3', TREE + 'path', 'http://example.com/StreetName'),
         quad('mypage#Relation3', TREE + 'remainingItems', "300^^http://www.w3.org/2001/XMLSchema#integer"),
       ]), url: 'mypage'})).resolves.toEqual(
@@ -169,14 +179,30 @@ describe('ActorRdfMetadataExtractTreeRelations', () => {
                   "@type": TREE + "Relation",
                   'tree:path' : 'http://example.com/StreetName',
                   'tree:remainingItems' : 100,
-                  'tree:value' : 'Sint',
+                  "tree:value": {
+                    datatype: {
+                      termType: "NamedNode",
+                      value: "http://www.w3.org/2001/XMLSchema#string",
+                    },
+                    language: "",
+                    termType: "Literal",
+                    value: 'Sint',
+                  },
                 }],
                 ['mypage#Relation3', {
                   "@id": "mypage#Relation3",
                   "@type": TREE + "Relation",
                   'tree:path' : 'http://example.com/StreetName',
                   'tree:remainingItems' : 300,
-                  'tree:value' : 'Tech',
+                  "tree:value": {
+                    datatype: {
+                      termType: "NamedNode",
+                      value: "http://www.w3.org/2001/XMLSchema#string",
+                    },
+                    language: "",
+                    termType: "Literal",
+                    value: 'Tech',
+                  },
                 }],
               ]),
             },
@@ -188,7 +214,7 @@ describe('ActorRdfMetadataExtractTreeRelations', () => {
       return expect(actor.run({ context, metadata: stream([
         quad('mypage#Relation1', TYPE, TREE + 'Relation'),
         quad('mypage#Relation1', TREE + 'node', 'mypage#Node2'),
-        quad('mypage#Relation1', TREE + 'value', 'Sint'),
+        quad('mypage#Relation1', TREE + 'value', '"Sint"'),
         quad('mypage#Relation1', TREE + 'path', 'http://example.com/firstpart'),
       ]), url: 'mypage' })).resolves.toEqual(
         {
@@ -203,7 +229,15 @@ describe('ActorRdfMetadataExtractTreeRelations', () => {
                   '@type': TREE + 'Relation',
                   'tree:node': 'mypage#Node2',
                   'tree:path': 'http://example.com/firstpart',
-                  'tree:value': 'Sint',
+                  "tree:value": {
+                    datatype: {
+                      termType: "NamedNode",
+                      value: "http://www.w3.org/2001/XMLSchema#string",
+                    },
+                    language: "",
+                    termType: "Literal",
+                    value: 'Sint',
+                  },
                 }],
               ]),
             },
