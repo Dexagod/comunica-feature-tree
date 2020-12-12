@@ -6089,9 +6089,9 @@ inherits@2.0.3:
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
 ini@^1.3.2, ini@^1.3.4, ini@^1.3.5, ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
+  integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 init-package-json@^1.10.3:
   version "1.10.3"
@@ -10017,10 +10017,10 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
-tree-specification-pruning@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tree-specification-pruning/-/tree-specification-pruning-1.0.4.tgz#5bf57b8ac3998ab99fea34d5cc6449ad71d1fa21"
-  integrity sha512-Ghld6nn/zH0l+ht1K1Y+5iwGnLr5M6F8m0WxDlNHFAK9uSmoB5YwIyFwz07Pg7/HPatIsdPihBcCqo3ENFnuzw==
+tree-specification-pruning@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/tree-specification-pruning/-/tree-specification-pruning-1.0.6.tgz#c4b903c0260667db014796bebbf24b125582d3ab"
+  integrity sha512-hJaPvWRj6dcZPk2uXL537gYFqBlO2No+hXz1i9rsjdZ6POcHtDBTZ0iueVB8E+FUSxC9RjiIZ/F1SFvvZJut7Q==
   dependencies:
     "@types/n3" "^1.1.5"
     "@types/rdf-js" "^3.0.1"
