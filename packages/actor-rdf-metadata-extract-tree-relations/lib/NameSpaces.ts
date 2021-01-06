@@ -5,8 +5,8 @@ export enum NameSpaces {
   RDF = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
   SHACL = 'http://www.w3.org/ns/shacl#',
   EX = 'http://www.example.org#',
-  HYDRA = 'https://www.w3.org/ns/hydra/core#',
+  HYDRA = 'http://www.w3.org/ns/hydra/core#',
   RDFS = 'https://www.w3.org/2000/01/rdf-schema#',
-  VOID = 'rdfs.org/ns/void#',
-  DCTERMS = 'purl.org/dc/terms/',
+  VOID = 'http://rdfs.org/ns/void#',
+  DCTERMS = 'http://purl.org/dc/terms/',
 }

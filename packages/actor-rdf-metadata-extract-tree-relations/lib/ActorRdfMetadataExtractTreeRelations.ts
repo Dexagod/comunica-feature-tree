@@ -5,6 +5,7 @@ import {
   fromRdf,
 } from "rdf-literal";
 
+import { extractMetadata } from '@dexagod/tree-metadata-extraction';
 import * as RDF from 'rdf-js';
 import { defaultContext } from "tree-specification-pruning/dist/Util/Util";
 import { NameSpaces } from './NameSpaces';
@@ -154,11 +155,26 @@ export class ActorRdfMetadataExtractTreeRelations extends ActorRdfMetadataExtrac
   }
 
   public async run(action: IActionRdfMetadataExtract): Promise<IActorRdfMetadataExtractOutput> {
-    // return this.runWithoutRelationPruning(action);
+    // // return this.runWithoutRelationPruning(action);
+    // const metadata: {[id: string]: any} = {};
+    // const treeProperties = await this.getTreeProperties(action.metadata);
+    // // require('lodash.assign')(metadata, this.getLinks(action.url, treeProperties));
+    // require('lodash.assign')(metadata, { treeProperties } );
+    // return { metadata };
+
+    const quadArray: Promise<any[]> = new Promise((resolve, reject) => {
+      const quads: any[] = [];
+      action.metadata.on('error', reject);
+      action.metadata.on('data', (quad) => { quads.push(quad); });
+      action.metadata.on('end', () => { resolve(quads); });
+    });
+    const extractedMetadata = await extractMetadata(await quadArray);
+
+    const treeMetadata = { treeMetadata: extractedMetadata };
+
     const metadata: {[id: string]: any} = {};
-    const treeProperties = await this.getTreeProperties(action.metadata);
     // require('lodash.assign')(metadata, this.getLinks(action.url, treeProperties));
-    require('lodash.assign')(metadata, { treeProperties } );
+    require('lodash.assign')(metadata, treeMetadata );
     return { metadata };
   }
 
