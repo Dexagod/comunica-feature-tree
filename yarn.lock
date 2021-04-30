@@ -9581,9 +9581,9 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 ssri@^6.0.0, ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
@@ -10017,10 +10017,10 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
-tree-specification-pruning@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tree-specification-pruning/-/tree-specification-pruning-1.0.4.tgz#5bf57b8ac3998ab99fea34d5cc6449ad71d1fa21"
-  integrity sha512-Ghld6nn/zH0l+ht1K1Y+5iwGnLr5M6F8m0WxDlNHFAK9uSmoB5YwIyFwz07Pg7/HPatIsdPihBcCqo3ENFnuzw==
+tree-specification-pruning@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/tree-specification-pruning/-/tree-specification-pruning-1.0.6.tgz#c4b903c0260667db014796bebbf24b125582d3ab"
+  integrity sha512-hJaPvWRj6dcZPk2uXL537gYFqBlO2No+hXz1i9rsjdZ6POcHtDBTZ0iueVB8E+FUSxC9RjiIZ/F1SFvvZJut7Q==
   dependencies:
     "@types/n3" "^1.1.5"
     "@types/rdf-js" "^3.0.1"
