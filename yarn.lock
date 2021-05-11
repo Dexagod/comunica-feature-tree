@@ -7260,9 +7260,9 @@ lodash.uniqwith@^4.5.0:
   integrity sha1-egy/ZfQ7WShiWp1NDcVLGMrcfvM=
 
 lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.2.1:
-  version "4.17.19"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
-  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-driver@^1.2.7:
   version "1.2.7"
@@ -10017,10 +10017,10 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
-tree-specification-pruning@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tree-specification-pruning/-/tree-specification-pruning-1.0.4.tgz#5bf57b8ac3998ab99fea34d5cc6449ad71d1fa21"
-  integrity sha512-Ghld6nn/zH0l+ht1K1Y+5iwGnLr5M6F8m0WxDlNHFAK9uSmoB5YwIyFwz07Pg7/HPatIsdPihBcCqo3ENFnuzw==
+tree-specification-pruning@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/tree-specification-pruning/-/tree-specification-pruning-1.0.6.tgz#c4b903c0260667db014796bebbf24b125582d3ab"
+  integrity sha512-hJaPvWRj6dcZPk2uXL537gYFqBlO2No+hXz1i9rsjdZ6POcHtDBTZ0iueVB8E+FUSxC9RjiIZ/F1SFvvZJut7Q==
   dependencies:
     "@types/n3" "^1.1.5"
     "@types/rdf-js" "^3.0.1"
